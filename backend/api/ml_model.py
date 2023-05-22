@@ -64,7 +64,8 @@ device = 'cpu'
 
 def save_decoded_image(img, outputpath):
     img_mod = img.view(img.size(0), 3, 224, 224)
-    outputpath = outputpath.replace("incoming_blurred_images", "outgoing_de_blurred_images")
+    outputpath = outputpath.replace(
+        "incoming_blurred_images", "outgoing_de_blurred_images")
     # print(outputpath)
     save_image(img_mod, outputpath)
     return outputpath
